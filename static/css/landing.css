@@ -96,3 +96,81 @@
     .hero-banner { padding: 3rem 1.25rem 3.5rem; }
     .hero-banner-actions { flex-direction: column; align-items: center; }
 }
+
+/* ------------------------------------------------------------------ */
+/* Hero video trigger + modal                                          */
+/* ------------------------------------------------------------------ */
+
+.hero-video-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.hero-video-trigger:hover { opacity: 1; }
+
+.hero-video-trigger-icon {
+    font-size: 0.65rem;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 1000;
+}
+
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 840px;
+    background: var(--paper-card);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.modal-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.modal-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
